@@ -6,10 +6,12 @@ import com.driver.model.Hotel;
 import com.driver.model.User;
 import com.driver.repositories.HotelManagementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class HotelManagementService {
 
     @Autowired
