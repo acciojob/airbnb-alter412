@@ -24,6 +24,10 @@ public class HotelManagementRepository {
 
     public String addHotel(Hotel hotel) {
 
+        if(hotelDB.containsKey(hotel.getHotelName())){
+            return "FAILURE";
+        }
+
         hotelDB.put(hotel.getHotelName(),hotel);
         if(hotel.getFacilities()!=null){
             hotelFacilities.put(hotel.getHotelName(),hotel.getFacilities());
