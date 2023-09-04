@@ -14,8 +14,7 @@ import java.util.UUID;
 @Service
 public class HotelManagementService {
 
-    @Autowired
-    HotelManagementRepository hmr;
+    HotelManagementRepository hmr = new HotelManagementRepository();
     public String addHotel(Hotel hotel) {
         if(hotel==null || hotel.getHotelName()==null){
             return "FAILURE";
